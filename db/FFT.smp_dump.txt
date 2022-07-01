@@ -1,0 +1,18 @@
+
+State Machine - |FFT|state
+Name state.WRITE state.COMPUTE state.NEUTRAL state.READ 
+state.READ 0 0 0 0 
+state.NEUTRAL 0 0 1 1 
+state.COMPUTE 0 1 0 1 
+state.WRITE 1 0 0 1 
+
+State Machine - |FFT|RAM_CONTROLLER:rc|state
+Name state.WRITE_ACKNOWLEDGE state.WRITE_B state.WRITE_A state.READ_ACKNOWLEDGE state.READ_TWIDDLE state.READ_B state.READ_A state.NEUTRAL 
+state.NEUTRAL 0 0 0 0 0 0 0 0 
+state.READ_A 0 0 0 0 0 0 1 1 
+state.READ_B 0 0 0 0 0 1 0 1 
+state.READ_TWIDDLE 0 0 0 0 1 0 0 1 
+state.READ_ACKNOWLEDGE 0 0 0 1 0 0 0 1 
+state.WRITE_A 0 0 1 0 0 0 0 1 
+state.WRITE_B 0 1 0 0 0 0 0 1 
+state.WRITE_ACKNOWLEDGE 1 0 0 0 0 0 0 1 

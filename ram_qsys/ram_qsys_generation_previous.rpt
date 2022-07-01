@@ -1,0 +1,48 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\varun\Documents\Projects\FPGA\FFT\ram_qsys.qsys --block-symbol-file --output-directory=C:\Users\varun\Documents\Projects\FPGA\FFT\ram_qsys --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading FFT/ram_qsys.qsys
+Progress: Reading input file
+Progress: Adding bridge [altera_up_external_bus_to_avalon_bridge 18.0]
+Progress: Parameterizing module bridge
+Progress: Adding clk [clock_source 20.1]
+Progress: Parameterizing module clk
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module onchip_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\varun\Documents\Projects\FPGA\FFT\ram_qsys.qsys --synthesis=VERILOG --output-directory=C:\Users\varun\Documents\Projects\FPGA\FFT\ram_qsys\synthesis --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading FFT/ram_qsys.qsys
+Progress: Reading input file
+Progress: Adding bridge [altera_up_external_bus_to_avalon_bridge 18.0]
+Progress: Parameterizing module bridge
+Progress: Adding clk [clock_source 20.1]
+Progress: Parameterizing module clk
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module onchip_mem
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ram_qsys: Generating ram_qsys "ram_qsys" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master bridge.avalon_master and slave onchip_mem.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master bridge.avalon_master and slave onchip_mem.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master bridge.avalon_master and slave onchip_mem.s1 because the master has address signal 14 bit wide, but the slave is 11 bit wide.
+Info: bridge: Starting Generation of External Bus to Avalon Bridge
+Info: bridge: "ram_qsys" instantiated altera_up_external_bus_to_avalon_bridge "bridge"
+Info: onchip_mem: Starting RTL generation for module 'ram_qsys_onchip_mem'
+Info: onchip_mem:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=ram_qsys_onchip_mem --dir=C:/Users/varun/AppData/Local/Temp/alt8999_5586172016462556507.dir/0003_onchip_mem_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/varun/AppData/Local/Temp/alt8999_5586172016462556507.dir/0003_onchip_mem_gen//ram_qsys_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem: Done RTL generation for module 'ram_qsys_onchip_mem'
+Info: onchip_mem: "ram_qsys" instantiated altera_avalon_onchip_memory2 "onchip_mem"
+Info: mm_interconnect_0: "ram_qsys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ram_qsys" instantiated altera_reset_controller "rst_controller"
+Info: bridge_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "bridge_avalon_master_translator"
+Info: onchip_mem_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_mem_s1_translator"
+Info: ram_qsys: Done "ram_qsys" with 7 modules, 9 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

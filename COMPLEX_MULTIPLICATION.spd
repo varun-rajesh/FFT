@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="COMPLEX_MULTIPLICATION_sim/COMPLEX_MULTIPLICATION.vo"
+   type="VERILOG" />
+ <topLevel name="COMPLEX_MULTIPLICATION" />
+ <deviceFamily name="max10" />
+</simPackage>

@@ -1,0 +1,14 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst ram_qsys.clk -pg 1 -lvl 1 -y 30
+preplace inst ram_qsys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst ram_qsys.bridge -pg 1 -lvl 2 -y 70
+preplace inst ram_qsys.onchip_mem -pg 1 -lvl 3 -y 50
+preplace netloc EXPORT<net_container>ram_qsys</net_container>(SLAVE)ram_qsys.ram,(SLAVE)bridge.external_interface) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>ram_qsys</net_container>(SLAVE)ram_qsys.clk,(SLAVE)clk.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>ram_qsys</net_container>(SLAVE)bridge.reset,(MASTER)clk.clk_reset,(SLAVE)onchip_mem.reset1) 1 1 2 260 160 NJ
+preplace netloc POINT_TO_POINT<net_container>ram_qsys</net_container>(MASTER)bridge.avalon_master,(SLAVE)onchip_mem.s1) 1 2 1 N
+preplace netloc EXPORT<net_container>ram_qsys</net_container>(SLAVE)clk.clk_in_reset,(SLAVE)ram_qsys.reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>ram_qsys</net_container>(SLAVE)bridge.clk,(MASTER)clk.clk,(SLAVE)onchip_mem.clk1) 1 1 2 280 60 NJ
+levelinfo -pg 1 0 50 670
+levelinfo -hier ram_qsys 60 90 310 570 660
